@@ -1,0 +1,168 @@
+caminhos para enviar para github.
+nesse exemplo eu estava em uma pasta e fui para uma outra, deu um erro utilizei o  $ git pull  origin master --allow-unrelated-histories, depois o pull novamente e push master
+
+
+Pedro@DESKTOP-APTTH0E MINGW64 ~/Documents/ALURA boticario/Curso-Desenvolve-github/fundamentos js/aula base js
+$ git init
+Initialized empty Git repository in C:/Users/Pedro/Documents/ALURA boticario/Curso-Desenvolve-github/fundamentos js/aula base js/.git/
+
+Pedro@DESKTOP-APTTH0E MINGW64 ~/Documents/ALURA boticario/Curso-Desenvolve-github/fundamentos js/aula base js (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .hintrc      
+        Ano_Copa.html
+        adivinha_mais.html
+        chute.html
+        estrelas.html
+        futebol.html
+        idade_familiaries.html
+        imc.html
+        jogo.html
+        tabuada.html
+        testes.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Pedro@DESKTOP-APTTH0E MINGW64 ~/Documents/ALURA boticario/Curso-Desenvolve-github/fundamentos js/aula base js (master)
+$ git remote add origin https://github.com/vevemaciel/Fundamentos.js.git
+
+Pedro@DESKTOP-APTTH0E MINGW64 ~/Documents/ALURA boticario/Curso-Desenvolve-github/fundamentos js/aula base js (master)
+$ git add .
+warning: in the working copy of '.hintrc', LF will be replaced by CRLF the next time Git touches it
+
+Pedro@DESKTOP-APTTH0E MINGW64 ~/Documents/ALURA boticario/Curso-Desenvolve-github/fundamentos js/aula base js (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .hintrc
+        new file:   Ano_Copa.html
+        new file:   adivinha_mais.html
+        new file:   chute.html
+        new file:   estrelas.html
+        new file:   futebol.html
+        new file:   idade_familiaries.html
+        new file:   imc.html
+        new file:   jogo.html
+        new file:   tabuada.html
+        new file:   testes.html
+
+
+Pedro@DESKTOP-APTTH0E MINGW64 ~/Documents/ALURA boticario/Curso-Desenvolve-github/fundamentos js/aula base js (master)
+$ git commit -m "exemplos aula semana 8 js"
+[master (root-commit) cbacd43] exemplos aula semana 8 js
+ 11 files changed, 464 insertions(+)
+ create mode 100644 .hintrc
+ create mode 100644 Ano_Copa.html
+ create mode 100644 adivinha_mais.html
+ create mode 100644 chute.html
+ create mode 100644 estrelas.html
+ create mode 100644 futebol.html
+ create mode 100644 idade_familiaries.html
+ create mode 100644 imc.html
+ create mode 100644 jogo.html
+ create mode 100644 tabuada.html
+ create mode 100644 testes.html
+
+Pedro@DESKTOP-APTTH0E MINGW64 ~/Documents/ALURA boticario/Curso-Desenvolve-github/fundamentos js/aula base js (master)
+$ git push origin master
+To https://github.com/vevemaciel/Fundamentos.js.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/vevemaciel/Fundamentos.js.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Pedro@DESKTOP-APTTH0E MINGW64 ~/Documents/ALURA boticario/Curso-Desenvolve-github/fundamentos js/aula base js (master)
+$ git pull
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 8 (delta 0), reused 5 (delta 0), pack-reused 0
+Unpacking objects: 100% (8/8), 1.40 KiB | 3.00 KiB/s, done.
+From https://github.com/vevemaciel/Fundamentos.js
+ * [new branch]      main       -> origin/main
+ * [new branch]      master     -> origin/master
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+
+Pedro@DESKTOP-APTTH0E MINGW64 ~/Documents/ALURA boticario/Curso-Desenvolve-github/fundamentos js/aula base js (master)
+$ git push origin master
+To https://github.com/vevemaciel/Fundamentos.js.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/vevemaciel/Fundamentos.js.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Pedro@DESKTOP-APTTH0E MINGW64 ~/Documents/ALURA boticario/Curso-Desenvolve-github/fundamentos js/aula base js (master)
+$ git pull  origin master
+From https://github.com/vevemaciel/Fundamentos.js
+ * branch            master     -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
+Pedro@DESKTOP-APTTH0E MINGW64 ~/Documents/ALURA boticario/Curso-Desenvolve-github/fundamentos js/aula base js (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Pedro@DESKTOP-APTTH0E MINGW64 ~/Documents/ALURA boticario/Curso-Desenvolve-github/fundamentos js/aula base js (master)
+$ git pull  origin master --allow-unrelated-histories
+From https://github.com/vevemaciel/Fundamentos.js
+ * branch            master     -> FETCH_HEAD
+Merge made by the 'ort' strategy.
+ type-boolean.js     | 10 ++++++++++
+ type-number copy.js | 19 +++++++++++++++++++
+ type-string.js      | 21 +++++++++++++++++++++
+ 3 files changed, 50 insertions(+)
+ create mode 100644 type-boolean.js
+ create mode 100644 type-number copy.js
+ create mode 100644 type-string.js
+
+Pedro@DESKTOP-APTTH0E MINGW64 ~/Documents/ALURA boticario/Curso-Desenvolve-github/fundamentos js/aula base js (master)
+$ git pull  origin master
+From https://github.com/vevemaciel/Fundamentos.js
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+Pedro@DESKTOP-APTTH0E MINGW64 ~/Documents/ALURA boticario/Curso-Desenvolve-github/fundamentos js/aula base js (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Pedro@DESKTOP-APTTH0E MINGW64 ~/Documents/ALURA boticario/Curso-Desenvolve-github/fundamentos js/aula base js (master)
+$ git add .
+
+Pedro@DESKTOP-APTTH0E MINGW64 ~/Documents/ALURA boticario/Curso-Desenvolve-github/fundamentos js/aula base js (master)
+$ git push origin master
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 4.42 KiB | 647.00 KiB/s, done.
+Total 15 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), done.
+To https://github.com/vevemaciel/Fundamentos.js.git
+   6935df9..17b5496  master -> master
+
+Pedro@DESKTOP-APTTH0E MINGW64 ~/Documents/ALURA boticario/Curso-Desenvolve-github/fundamentos js/aula base js (master)
+$
